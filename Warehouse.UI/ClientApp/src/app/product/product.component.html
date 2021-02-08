@@ -1,0 +1,45 @@
+<block-ui>
+  <div class="overflow-auto" style="overflow-y:auto; max-height: 500px">
+    <div [ngClass]="'error'" *ngIf="errorMessage.length > 0 "> {{errorMessage}} </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col" class="d-none"></th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Contain Articles</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products; index as i">
+          <td scope="row">{{ i + 1 }}</td>
+          <td class="d-none">{{ product.productId }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td>
+            <table class="table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">ArticleName</th>
+                  <th scope="col">AmountOf</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let article of product.containArticles">
+                  <td>{{ article.articleName }}</td>
+                  <td>{{ article.amountOf }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td>
+            <!--<button>Delete</button>-->
+            <i class="fa fa-trash" [ngClass]="'pointer'" title="Delete" (click)="deleteProduct(product.productId)" aria-hidden="true"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</block-ui>

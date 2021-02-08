@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "name": "Dining Chair",
+	  "price": 2567,
+      "containArticles": [
+        {
+          "articleId": "1",
+          "amountOf": "4"
+        },
+        {
+          "articleId": "2",
+          "amountOf": "8"
+        },
+        {
+          "articleId": "3",
+          "amountOf": "1"
+        }
+      ]
+    },
+    {
+      "name": "Dinning Table",
+	  "price":2345,
+      "containArticles": [
+        {
+          "articleId": "1",
+          "amountOf": "4"
+        },
+        {
+          "articleId": "2",
+          "amountOf": "8"
+        },
+        {
+          "articleId": "4",
+          "amountOf": "1"
+        }
+      ]
+    }
+  ]
+}

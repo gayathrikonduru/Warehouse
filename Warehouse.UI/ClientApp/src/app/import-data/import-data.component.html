@@ -1,0 +1,20 @@
+<block-ui>
+  <form #importForm="ngForm" class="m-5" (ngSubmit)="onSubmit(importForm.value)">
+    <div [ngClass]="'error'" *ngIf="errorMessage.length > 0 "> {{errorMessage}} </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <select class="form-control" #importTypeSelect name="importType" (change)="onImportTypeChange($event.target.value)" ngModel>
+          <option value="">Please select type</option>
+          <option *ngFor="let key of importTypeKeys" value="{{key}}" [ngValue]="key">{{importTypes[key]}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <!--<label for="inputFile">Choose File </label>-->
+        <input #inputFile class="form-control-file" type="file" id="inputFile" name="inputFile" ngModel (change)="onFileChange($event)" />
+      </div>
+    </div>
+    <button type="submit" #btnSubmit class="btn btn-primary" [disabled]="!file || !importTypeSelected">Submit</button>
+  </form>
+</block-ui> 
