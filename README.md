@@ -15,18 +15,19 @@ The warehouse should have at least the following functionality;
 * Get all products and quantity of each that is an available with the current inventory
 * Remove(Sell) a product and update the inventory accordingly
 
-Solution:
+## Solution
 
 UI to import products and inventory data to the software. 
 REST API crud operations to work on products.
 
-Architecture:
+## Architecture
 
-This solution consists of UI which is built using Angular components and .Net Core Web API which uses three tier architecture  to separate the business logic, database connection and UI to improve code readability, scalability and easy maintainence.
+This solution consists of UI which is built using Angular components and bootstrap.
+Web API is done using .Net Core three tier architecture which separates the business logic, database entities and UI to improve code readability, scalability and easy maintainence.
 
 In addition to this Entity Framework Core Code first approach is used to connect to SQL Server Database which makes easy to make database changes with migrations and more scalability.
 
-Nunit and Moq is used to unit testing.
+Nunit and Moq is used for unit testing.
 
 
 
