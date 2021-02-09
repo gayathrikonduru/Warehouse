@@ -15,7 +15,7 @@
 
 1. Import Products and Articles Data
      
-     Test files has been added to the resources folder
+     Test files has been added to the resources folder - Test files which is given as part of assignment has been modified. please use the test files that is attached in the solution to get desired results. 
 
      Articles need to be imported first before products, since the mapping is required.
 
